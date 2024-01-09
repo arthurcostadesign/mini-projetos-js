@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --laranja: #F05219;
+    --vermelho: #F04000;
+
+    --verde-agua-1: #55F2A6;
+    --verde-agua-2: #00F0C0;
+
+    --azul-escuro: #081DA3;
+    --roxo: #690CF0;
+
+    --branco: #EBEBEB;
+    --preto: #141414;
+}
+
+html {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 16px;
+    padding: 36px;
+    max-width: 412px;
+}
+
+.laranja .container {
+    background: linear-gradient(to right, var(--laranja), var(--vermelho));
+}
+
+.verde .container {
+    background: linear-gradient(to right, var(--verde-agua-1), var(--verde-agua-2));
+}
+
+.roxo .container {
+    background: linear-gradient(to right, var(--azul-escuro), var(--roxo));
+}
+
+.title {
+    font-family: 'Inter Tight', sans-serif;
+    margin-bottom: 16px;
+    color: var(--branco);
+}
+
+.title i {
+    margin-right: 6px;
+}
+
+.verde .title {
+    color: var(--preto);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.input label {
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
+.verde .input label {
+    color: var(--preto);
+}
+
+.input input {
+    width: 100%;
+    border: none;
+    border-radius: 128px;
+    padding: 6px 12px;
+    font-weight: 600;
+    background-color: var(--branco);
+    color: var(--preto);
+    -moz-appearance: textfield;
+}
+
+.input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.verde .input input {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 16px;
+    padding: 6px 12px;
+    border-radius: 128px;
+    border: none;
+    background-color: var(--branco);
+    color: var(--preto);
+    cursor: pointer;
+    margin-bottom: 48px;
+}
+
+.verde button {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.result {
+    background-color: var(--preto);
+    width: 100%;
+    height: 128px;
+    border-radius: 8px;
+    text-align: left;
+    padding: 16px;
+    font-style: italic;
+}
+
+.verde .result {
+    background-color: var(--branco);
+    color: var(--preto);
+}
