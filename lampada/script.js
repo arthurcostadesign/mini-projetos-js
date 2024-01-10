@@ -1,5 +1,4 @@
-const turnOn = document.getElementById("turnOn");
-const turnOff = document.getElementById("turnOff");
+const turnOnOff = document.getElementById("turnOnOff");
 const lamp = document.getElementById("lamp");
 const turnRecharge = document.getElementById("recharge");
 
@@ -10,12 +9,14 @@ function isLampBroken() {
 function lampOn() {
     if (!isLampBroken()) {
         lamp.src = "img/ligada.jpg";
+        turnOnOff.textContent = "Desligar"
     }
 }
 
 function lampOff() {
     if (!isLampBroken()) {
         lamp.src = "img/desligada.jpg";
+        turnOnOff.textContent = "Ligar"
     }
 }
 
@@ -23,12 +24,21 @@ function lampBroken() {
     lamp.src = "img/quebrada.jpg";
 }
 
+function lampOnOff() {
+    if(turnOnOff.textContent == "Ligar") {
+        lampOn();
+        turnOnOff.textContent = "Desligar";
+    } else {
+        lampOff();
+        turnOnOff.textContent = "Ligar"
+    }
+}
+
 function recharge() {
     location.reload()
 }
 
-turnOn.addEventListener("click", lampOn);
-turnOff.addEventListener("click", lampOff);
+turnOnOff.addEventListener("click", lampOnOff);
 turnRecharge.addEventListener("click", recharge);
 lamp.addEventListener("mouseover", lampOn);
 lamp.addEventListener("mouseout", lampOff);
