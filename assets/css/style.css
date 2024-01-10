@@ -415,6 +415,7 @@ footer:hover+.fixed-share-button {
         transform ease 0.3s,
         box-shadow ease 0.3s,
         bottom ease 0.3s;
+    z-index: 99999;
 }
 
 .laranja .fixed-share-button {
